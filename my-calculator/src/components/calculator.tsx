@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Buttons from './Buttons';
+import Buttons, { ButtonType } from './Buttons';
 
 const Container = styled.div`
   background-color: black;
@@ -21,17 +21,22 @@ const Calculator: React.FC = () => {
   return (
     <Container>
       <Grid>
-        <Buttons label="AC" position = {0, 0}  width={2}/>
-        <Buttons label="oops" position ={0, 2}  width= {2}/>
-        <Buttons label="1" />
-        <Buttons label="2" />
-        <Buttons label="3" />
-        <Buttons label="4" />
-        <Buttons label="5" />
-        <Buttons label="6" />
-        <Buttons label="7" />
-        <Buttons label="8" />
-        <Buttons label="9" />
+        <Buttons label="AC" position = {[0, 0]}  width={2}/>
+        <Buttons label="oops" position ={[2, 0]}  width= {2}/>
+        <Buttons label="-" position = {[3, 1]} />
+        <Buttons label="+" position = {[3, 2]} />
+        <Buttons label="=" position = {[3, 3]} height={2} />
+        <Buttons type={ButtonType,Number}  label="9" position = {[2, 1]}/>
+        <Buttons type={ButtonType,Number}  label="8" position = {[1, 1]}/>
+        <Buttons type={ButtonType,Number} label="7" position = {[0, 1]} />
+        <Buttons type={ButtonType,Number} label="6" position = {[2, 2]} />
+        <Buttons type={ButtonType,Number} label="5" position = {[1, 2]}/>
+        <Buttons type={ButtonType,Number} label="4" position = {[0, 2]}/>
+        <Buttons type={ButtonType,Number} label="3" position = {[2, 3]}/>
+        <Buttons type={ButtonType,Number} label="2" position = {[1, 3]}/>
+        <Buttons type={ButtonType,Number} label="1" position = {[0, 3]} />
+        <Buttons type={ButtonType,Number} label="0" position = {[0, 4]} width ={3} />
+        
       </Grid>
     </Container>
   );
