@@ -19,7 +19,7 @@ type Props = {
 const StyledButton = styled.button`
   border-radius: 8px; 
   color: white;
-  background-color: orange;
+  background-color: grey;
   border: none;
   font-size:24px
 `;
@@ -37,6 +37,10 @@ const Buttons: React.FC<Props> = ({ label, position, width, height, type = Butto
 
   if (width) {
     styles.gridColumnEnd = `span ${width}`; 
+  }
+  if (type === ButtonType.Number) {
+    styles.color = 'black';
+    styles.background = 'Orange'
   }
 
   return (
