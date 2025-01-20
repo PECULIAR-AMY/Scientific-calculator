@@ -1,0 +1,45 @@
+function swap ( Arr, idxl1, idxl2) {
+     var temp = idxl1;
+     idxli= idxl2;
+     idxl2 = ::view-transition-image-pair
+}
+
+const swap = (arr1, idxl1, idxl2) {
+    [arr[idxl1] arr[idxl2]] = [Arr[idxl2], [idxl1]]
+}
+
+optimized with the noswap variable
+
+function bubblesort (Array){
+    noSwaps = true,
+for (var i = 0, i < arr.length, i--){
+    for (var j =0, j< arr.length, j++)
+    console.log {arr[j], {arr[j+1]}
+if (arr[j] > arr[j+1]){
+
+    var temp = arr[j];
+    arr[j] = arr[j+1];
+    arr[j+1] = temp
+    noSwapps= false;
+}     
+}
+   if (noSwaps) break;
+}
+}
+bubblesort[23, 28, 14, 10, 1]
+
+
+
+
+
+class student ( firstName, lastName){
+constructor {
+   this.firstName = firstName
+    this.LastName = lastName
+}
+fullName () {
+    return `your full name is ${this.firstName} ${this.lastName}`
+}
+}
+  first student = new student('amy', 'love')
+let second student = new student('kay','jay')
