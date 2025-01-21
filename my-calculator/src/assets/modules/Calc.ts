@@ -24,15 +24,17 @@ export enum InputType {
   
   const getOperator = (inputs: Array<CalcInput>): Array<Operator> => {
     return inputs.reduce<Array<Operator>>((operators, input) => {
-      const lastOperator: Operator = operators.length
-        ? operators[operators.length - 1]
-        : { operation: OperationType.Add, value: 0 };
+       const lastOperator: Operator =
+        operators.length > 0
+          ? { ...operators[operators.length - 1] } // Clone the last operator
+          : { operation: OperationType.Add, value: 0 }; // Default initial operator
   
       switch (input.type) {
         case InputType.Numerical:
           lastOperator.value = lastOperator.value * 10 + input.value; // Accumulate numerical value
+  
           if (!operators.length || operators[operators.length - 1] !== lastOperator) {
-            operators.push(lastOperator);
+            operators[operators.length - 1] = lastOperator; // Replace the last operator
           }
           break;
   
